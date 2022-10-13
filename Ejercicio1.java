@@ -1,26 +1,29 @@
-import java.util.Scanner;
 public class Ejercicio1{
     public static void main (String[] args){
-        Scanner sc = new Scanner (System.in);
-        System.out.print("Introduzca el dia de la semana (1=lunes, 2=martes, 3=miércoles, 4=jueves, 5=viernes): ");
-        int n = sc.nextInt();
-        if (n==1){
+        String dia;
+        System.out.print("Introduzca el dia de la semana: ");
+        dia = System.console().readLine();
+        dia = dia.toLowerCase(); // convierte a minúsculas todas las letras
+
+        switch(dia) {
+            case "lunes":
+            case "jueves":
             System.out.println("A primera toca programación");
-        }
-        if (n==2){
+            break;
+            case "martes":
             System.out.println("A primera toca sistemas informaticos");
-        }
-        if (n==3){
+            break;
+            case "miercoles":
+            case "miércoles":
             System.out.println("A primera toca entornos de desarollo");
-        }
-        if (n==4){
-            System.out.println("A primera toca programación");
-        }
-        if (n==5){
+            break;
+            case "viernes":
             System.out.println("A primera toca FOL");
+            break;
+            case "sabado":
+            case "domingo":
+            case "sábado":
+            System.out.println("No hay clases");
         }
-        if (n>5 || n<1)
-        System.out.println("No lo he entendido");
-        sc.close();
     }
 }
