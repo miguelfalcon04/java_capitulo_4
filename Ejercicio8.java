@@ -10,7 +10,6 @@ public class Ejercicio8 {
         double n3 = sc.nextFloat();
         double nota = ((n1+ n2 +n3)/3);
         System.out.printf("La nota media es de: %.2f \n", nota);
-        sc.close();
         if (nota>=9){
             System.out.print("Sobresaliente");
         }
@@ -26,5 +25,6 @@ public class Ejercicio8 {
         if (nota>=0 && nota <3){
             System.out.print("Insuficiente");
         }
+        sc.close();
     }
 }
