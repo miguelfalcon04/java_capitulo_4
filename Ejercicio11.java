@@ -8,7 +8,8 @@ public class Ejercicio11 {
         double m = sc.nextDouble();
         double horas = 24-h;
         double min = 60-m;
-        System.out.print("Quedan " + (int)horas + " horas y "  + (int)min + " minutos para media noche");
+        double segundos = ((horas*3600)+(min*60));
+        System.out.print("Quedan " + (int)segundos + " segundos para media noche");
         sc.close();
     }
 }
